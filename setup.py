@@ -7,7 +7,7 @@ from setuptools import setup, find_packages
 HERE = abspath(dirname(__file__))
 readme = open(join(HERE, 'README.md'), 'rU').read()
 
-version_file = open(join(HERE, 'colorbrewer.py'), 'rU')
+version_file = open(join(HERE, 'colorbrewer', '__init__.py'), 'rU')
 __version__ = re.sub(
     r".*\b__version__\s+=\s+'([^']+)'.*",
     r'\1',
@@ -21,16 +21,16 @@ setup(
     description      = 'A tool for selecting colorschemes, by Cynthia Brewer',
     long_description = readme,
     url              = 'http://github/dsc/colorbrewer-python',
-    
+
     author           = 'David Schoonover',
     author_email     = 'dsc@less.ly',
-    
+
     py_modules       = [ 'colorbrewer', ],
-    
+
     install_requires = [
         "bunch  >= 1.0",
     ],
-    
+
     keywords         = 'colorbrewer color maps tools',
     classifiers      = [
         "Development Status :: 5 - Stable",
