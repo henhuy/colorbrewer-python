@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from bunch import bunchify
 
 YlGn = {
     3: [(247,252,185), (173,221,142), (49,163,84)],
@@ -350,22 +349,3 @@ Set3 = {
     12: [(141,211,199), (255,255,179), (190,186,218), (251,128,114), (128,177,211), (253,180,98), (179,222,105), (252,205,229), (217,217,217), (188,128,189), (204,235,197), (255,237,111)]
 }
 qualitative = { 'Pastel2':Pastel2, 'Pastel1':Pastel1, 'Dark2':Dark2, 'Accent':Accent, 'Paired':Paired, 'Set1':Set1, 'Set2':Set2, 'Set3':Set3 }
-
-
-_colors = [YlGn, YlGnBu, GnBu, BuGn, PuBuGn, PuBu, BuPu,
-           RdPu, PuRd, OrRd, YlOrRd, YlOrBr, Purples, Blues, Greens,
-           Oranges, Reds, Greys, sequential, PuOr, BrBG, PRGn, PiYG, RdBu,
-           RdGy, RdYlBu, Spectral, RdYlGn, diverging, Accent, Dark2,
-           Paired, Pastel1, Pastel2, Set1, Set2, Set3, qualitative]
-
-for k, v in globals().items():
-    if isinstance(v, dict) and v in _colors:
-        globals()[k] = bunchify(v)
-
-__all__ = [ 'YlGn', 'YlGnBu', 'GnBu', 'BuGn', 'PuBuGn', 'PuBu', 'BuPu',
-            'RdPu', 'PuRd', 'OrRd', 'YlOrRd', 'YlOrBr', 'Purples', 'Blues',
-            'Greens', 'Oranges', 'Reds', 'Greys', 'sequential', 'PuOr',
-            'BrBG', 'PRGn', 'PiYG', 'RdBu', 'RdGy', 'RdYlBu', 'Spectral',
-            'RdYlGn', 'diverging', 'Accent', 'Dark2', 'Paired', 'Pastel1',
-            'Pastel2', 'Set1', 'Set2', 'Set3', 'qualitative'
-]
