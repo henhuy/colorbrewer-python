@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "colorbrewer"
+version = "2.0.0"
+description = "Colorbrewer package"
+authors = ["David Schoonover <dsc@less.ly>", "hendrik.huyskens <hendrik.huyskens@rl-institut.de>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^21.12b0"
+click = "7.1.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
